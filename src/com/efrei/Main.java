@@ -26,7 +26,9 @@ public class Main {
                     break;
                 }
                 case 2: {
-// Call a method of an exo
+                    int firstInt = 5;
+                    int secondInt = 7;
+                    System.out.println(firstInt + secondInt);
                     break;
                 }
 // …..
