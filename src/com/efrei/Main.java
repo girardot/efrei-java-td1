@@ -43,6 +43,18 @@ public class Main {
                     System.out.println("values : " + Arrays.toString(args));
                     System.out.println("average : " + average);
                 }
+                case 4: {
+                    System.out.println("Enter score in the range [0-20] (to stop entry enter other value)");
+                    int score = 0;
+                    int scoreSum = 0;
+                    do {
+                        scoreSum += score;
+                        score = scanner.nextInt();
+                    }
+                    while (score >= 0 && score <= 20);
+                    scanner.nextLine();
+                    System.out.println("sum : " + scoreSum);
+                }
                 default:
                     System.out.println("This exercise number does not exist");
             }
