@@ -29,6 +29,8 @@ public class Main {
                     int firstInt = 5;
                     int secondInt = 7;
                     System.out.println("The result of the sum is : " + firstInt + secondInt);
+                    int sum = firstInt + secondInt;
+                    System.out.println("The result of the sum is : " + sum);
                     break;
                 }
 // …..
