@@ -25,6 +25,9 @@ public class MainAdvanced {
                     break;
                 }
                 case 2: {
+                    System.out.println("Enter a word");
+                    String word = scanner.nextLine();
+                    System.out.println(word + " is palindrome " + isPalindrome(word));
                     break;
                 }
                 default:
@@ -66,6 +69,33 @@ public class MainAdvanced {
                 }
             }
         }
+    }
+
+    public static String reverseString(String stringToReverse) {
+        StringBuilder reversedString = new StringBuilder();
+        for (int i = stringToReverse.length() - 1; i >= 0; i--) {
+            reversedString.append(stringToReverse.charAt(i));
+        }
+        return reversedString.toString();
+    }
+
+    private static boolean compareStrings(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
+        //        return str1.compareTo(str2) == 0;
+    }
+
+    private static boolean isPalindrome(String word) {
+        String reverseString = reverseString(word);
+        System.out.println("reverseString : " + reverseString);
+        return compareStrings(word, reverseString);
     }
 
 }
