@@ -28,7 +28,7 @@ public class Main {
                 case 2: {
                     int firstInt = 5;
                     int secondInt = 7;
-                    System.out.println(firstInt + secondInt);
+                    System.out.println("The result of the sum is : " + firstInt + secondInt);
                     break;
                 }
 // …..
