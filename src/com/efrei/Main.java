@@ -12,9 +12,17 @@ public class Main {
         while (true) {
             System.out.println("Choose an exercise number : ");
             numExo = scanner.nextInt();
+            // !!!!!!!!!!!!!!!!!!!!!!!!!
+            scanner.nextLine();
             switch (numExo) {
                 case 1: {
-// Code of an exercise
+                    System.out.println("Enter first name  : ");
+                    String firstname = scanner.nextLine();
+                    System.out.println("Hello " + firstname + "\n How are you ?");
+                    String howAreYouResponse = scanner.nextLine();
+                    if (howAreYouResponse.contains("good") || howAreYouResponse.contains("fine")) {
+                        System.out.println(":-)");
+                    }
                     break;
                 }
                 case 2: {
