@@ -1,5 +1,6 @@
 package com.efrei;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -33,7 +34,15 @@ public class Main {
                     System.out.println("The result of the sum is : " + sum);
                     break;
                 }
-// …..
+                case 3: {
+                    double average = 0;
+                    for (String arg : args) {
+                        average += Integer.parseInt(arg);
+                    }
+                    average /= args.length;
+                    System.out.println("values : " + Arrays.toString(args));
+                    System.out.println("average : " + average);
+                }
                 default:
                     System.out.println("This exercise number does not exist");
             }
