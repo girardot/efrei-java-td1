@@ -16,7 +16,7 @@ public class MainIntermediate {
             scanner.nextLine();
             switch (numExo) {
                 case 1: {
-                    testIsEven(scanner);
+                    testIsEven();
                     break;
                 }
                 case 2: {
@@ -27,7 +27,11 @@ public class MainIntermediate {
                     break;
                 }
                 case 3: {
-
+                    int[] scores = new int[5];
+                    fillArr(scores, scores.length);
+                    displayArr(scores, scores.length);
+                    System.out.println("max " + maxArr(scores, scores.length));
+                    break;
                 }
 
                 default:
@@ -43,7 +47,8 @@ public class MainIntermediate {
         scanner.close();
     }
 
-    private static void testIsEven(Scanner scanner) {
+    private static void testIsEven() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("enter a positive integer to check if is even ");
         int i = scanner.nextInt();
         scanner.nextLine();
@@ -60,5 +65,32 @@ public class MainIntermediate {
 
     public static boolean isLeap(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    }
+
+    public static void fillArr(int[] arr, int size) {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < size; i++) {
+            System.out.println("enter int");
+            int inputInt = scanner.nextInt();
+            scanner.nextLine();
+            arr[i] = inputInt;
+        }
+    }
+
+    public static void displayArr(int[] arr, int size) {
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static int maxArr(int[] arr, int size) {
+        int max = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
     }
 }
