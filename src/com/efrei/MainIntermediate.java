@@ -20,7 +20,10 @@ public class MainIntermediate {
                     break;
                 }
                 case 2: {
-
+                    System.out.println("enter a year to check if is leap ");
+                    int year = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println(year + " is leap " + isLeap(year));
                     break;
                 }
                 case 3: {
@@ -55,4 +58,7 @@ public class MainIntermediate {
         return value % 2 == 0;
     }
 
+    public static boolean isLeap(int year) {
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    }
 }
