@@ -44,16 +44,25 @@ public class Main {
                     System.out.println("average : " + average);
                 }
                 case 4: {
-                    System.out.println("Enter score in the range [0-20] (to stop entry enter other value)");
-                    int score = 0;
+                    System.out.println("Enter scores in the range [0-20] (to stop entry enter other value)");
+                    int score;
                     int scoreSum = 0;
+                    int[] scores = new int[100];
+                    int i = 0;
                     do {
-                        scoreSum += score;
                         score = scanner.nextInt();
+                        if (score >= 0 && score <= 20) {
+                            scores[i] = score;
+                            scoreSum += score;
+                            i++;
+                        }
                     }
                     while (score >= 0 && score <= 20);
                     scanner.nextLine();
+                    System.out.println("scores number : " + i);
                     System.out.println("sum : " + scoreSum);
+                    System.out.println("average : " + average(scores, i));
+                    break;
                 }
                 default:
                     System.out.println("This exercise number does not exist");
@@ -67,4 +76,14 @@ public class Main {
         System.out.println("Bye ! ");
         scanner.close();
     }
+
+    private static double average(int[] numbers, int numberOfElement) {
+        double average = 0;
+        for (int number : numbers) {
+            average += number;
+        }
+        average /= numberOfElement;
+        return average;
+    }
+
 }
