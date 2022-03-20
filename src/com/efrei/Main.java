@@ -30,8 +30,7 @@ public class Main {
                     int firstInt = 5;
                     int secondInt = 7;
                     System.out.println("The result of the sum is : " + firstInt + secondInt);
-                    int sum = firstInt + secondInt;
-                    System.out.println("The result of the sum is : " + sum);
+                    System.out.println("The result of the sum is : " + (firstInt + secondInt));
                     break;
                 }
                 case 3: {
@@ -42,6 +41,7 @@ public class Main {
                     average /= args.length;
                     System.out.println("values : " + Arrays.toString(args));
                     System.out.println("average : " + average);
+                    break;
                 }
                 case 4: {
                     System.out.println("Enter scores in the range [0-20] (to stop entry enter other value)");
